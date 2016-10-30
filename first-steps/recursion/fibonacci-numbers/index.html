@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    var num = +prompt('Введите количество чисел Фибоначчи, без учета 0: ', '7');
+
+    function fib(n) {
+        if (n == 1 || n==0) {
+            return n;
+        } else return (fib(n - 1) + fib(n - 2) + 1);
+	}
+
+    alert( "Сумма чисел Фибоначчи: " + fib(num) );
+
+    // function fibLoop(n) {
+    //     var a1 = 1, 
+    //         a2 = 1;
+
+    //     for (var i = 0; i <= n - 2; i++) {
+    //         var b = a1 + a2;
+    //         a1 = a2;
+    //         a2 = b;
+    //     }
+    //     return a2;
+
+    // }
+
+    // function fibLoop(n) {
+    //   var a = 1,
+    //     b = 1;
+    //   for (var i = 3; i <= n; i++) {
+    //     var c = a + b;
+    //     a = b;
+    //     b = c;
+    //   }
+    //   return b;
+    // }
+            
+
+    // alert (fibLoop(5));
+
+</script>
+
+</body>
+</html>

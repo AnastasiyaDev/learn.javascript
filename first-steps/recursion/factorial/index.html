@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    var num = +prompt('Введите количество акториал числа', '5');
+    alert( 'Факториал числа ' + num + ' = ' + factorial(num) ); 
+
+    function factorial(n) {
+        if (n !== 0) {
+            return n * factorial(n - 1);
+        } else return 1;
+    }
+
+</script>
+
+</body>
+</html>

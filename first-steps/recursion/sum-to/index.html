@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function sumLoop(n) {
+        var sum = 0;
+    	for (var i = 1; i <= n; i++) {
+    		sum += i;
+    	}
+        return alert("1: " + sum);
+	}
+
+    function sumRecursion(n) {
+        if (n !== 1) {
+            return n + sumRecursion(n - 1);
+        } else return 1;
+    }
+
+    function sumFormula(n) {
+        return alert ('3: ' + n*(n+1)/2);
+    }
+
+	sumLoop(100);
+    alert('2: ' + sumRecursion(100) );
+    sumFormula(100);
+
+</script>
+
+</body>
+</html>
