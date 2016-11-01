@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = prompt('Введите слово', '');
+
+    function ucFirst(str) {
+        if (!str) return str; // проверка на пустую строчку
+
+        return str[0].toUpperCase() + str.substring(1);
+    }
+
+    alert( ucFirst(str) );
+</script>
+</body>
+</html>

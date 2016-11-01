@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [5, 4, 3, 8, 0, 2, 4, 3];
+    var arr2 = [];
+
+    function filterRange(arr, a, b) {
+        for (var i = 0; i < arr.length; i++){
+            if (arr[i] <= b && arr[i] >= a) {
+                arr2.push(arr[i]);
+            }
+        }
+        return arr2;
+    }
+
+    var filtered = filterRange(arr, 1, 5);
+    alert(filtered);
+</script>
+</body>
+</html>

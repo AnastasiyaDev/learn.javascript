@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function truncate(str, maxlength) {
+        if ( str.length > maxlength ) {
+            return str.substr(0,maxlength-3) + '...';
+        } else return str;
+    }
+
+    alert( truncate("Вот, что мне хотелось бы сказать на эту тему:", 20) );
+    alert( truncate("Первый аргумент имеет такой же смысл, как и в substring, а второй содержит не конечную позицию, а количество символов.", 20) );
+    alert( truncate("Всем привет!", 20) );
+
+</script>
+</body>
+</html>
