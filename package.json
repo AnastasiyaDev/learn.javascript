@@ -1,0 +1,22 @@
+{
+  "name": "learn.javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnastasiyaDev/learn.javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnastasiyaDev/learn.javascript/issues"
+  },
+  "homepage": "https://github.com/AnastasiyaDev/learn.javascript#readme",
+  "devDependencies": {
+    "eslint": "^3.9.1"
+  }
+}
