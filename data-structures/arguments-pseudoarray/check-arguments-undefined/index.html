@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function f(x) {
+        if (arguments.length !== 0) {
+            return 1;
+        }
+        return 0;
+    }
+
+    alert(f(undefined)); // 1
+    alert(f()); // 0
+</script>
+</body>
+</html>
