@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function makeBuffer() {
+        var temp = '';
+        return function buffer(str) {
+            if (arguments.length == 0) {
+                return temp;
+            }
+            temp += str;
+        }
+    }
+
+    var buffer = makeBuffer();
+
+    // добавить значения к буферу
+    buffer('Замыкания');
+    buffer(' Использовать');
+    buffer(' Нужно!');
+
+    // получить текущее значение
+    alert(buffer()); // Замыкания Использовать Нужно!
+</script>
+</body>
+</html>
