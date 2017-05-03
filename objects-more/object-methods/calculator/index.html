@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        var calculator = {
+            firstNum: +prompt('Введите первое число', '0'),
+            secondNum: +prompt('Введите второе число', '0'),
+
+            read: function () {
+                this.firstNum;
+                this.secondNum;
+            },
+
+            sum: function () {
+                return 'Сумма: ' +(this.firstNum + this.secondNum);
+            },
+
+            mul: function () {
+                return 'Произведение: ' + this.firstNum * this.secondNum;
+            }
+        };
+
+        calculator.read();
+        alert( calculator.sum() );
+        alert( calculator.mul() );
+    </script>
+</body>
+</html>
