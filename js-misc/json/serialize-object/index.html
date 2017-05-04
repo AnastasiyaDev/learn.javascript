@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+</head>
+<body>
+<script>
+    var leader = {
+        name: "Василий Иванович",
+        age: 35
+    };
+
+    var jsonObj = JSON.stringify(leader, '', 4);
+    alert (jsonObj);
+
+    leader = JSON.parse(jsonObj);
+    alert (leader);
+
+</script>
+</body>
+</html>
