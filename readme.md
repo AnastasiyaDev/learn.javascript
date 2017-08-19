@@ -51,4 +51,9 @@ var a = '443';
 var n = 255;
 alert( n.toString(16) ); // ff
 ```
+
+**Случайное число в интервале:**  
+`Math.random() * (max - min) + min` - дробное  
+`Math.round(Math.random() * (max - min) + min)` - целое  
+
 ---------------
