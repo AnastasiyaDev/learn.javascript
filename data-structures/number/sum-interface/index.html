@@ -6,14 +6,22 @@
 </head>
 <body>
 <script>
-    var num1 = +prompt('Введите первое число', '100');
-    var num2 = +prompt('Введите второе число', '100');
+    'use strict';
 
-    if (isNaN(num1) && isNaN(num2)) {
-        alert('Одно из начений или оба не число, введите числа');
-    } else {
-        alert(num1 + num2);
-    }
+    let getSum = ()  => {
+        let num1 = +prompt('Введите первое число', ''),
+            num2 = +prompt('Введите второе число', '');
+
+        if (isNaN(num1) || isNaN(num2)) {
+            alert('Одно из значений или оба - не число\n' +
+                  'Введите числа');
+            getSum();
+        } else {
+            alert(num1 + num2);
+        }
+    };
+
+    getSum();
 
 </script>
 </body>
