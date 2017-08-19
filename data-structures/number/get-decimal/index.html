@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let getDecimal = (num) => {
+        let numToStr    = num + '',
+            IntegerPart = (numToStr.indexOf('.') !== -1) ? numToStr.split('.')[1] : 0;
+
+        alert(IntegerPart);
+    };
+
+    getDecimal(12.03);
+    getDecimal(8526.6589);
+    getDecimal(-111.359);
+    getDecimal(.6589);
+    getDecimal(5);
+</script>
+</body>
+</html>
