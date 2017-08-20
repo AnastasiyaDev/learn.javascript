@@ -57,3 +57,9 @@ alert( n.toString(16) ); // ff
 `Math.round(Math.random() * (max - min) + min)` - целое  
 
 ---------------
+# Ресурсы 
+
+* [доки по Markdown](https://github.com/OlgaVlasova/markdown-doc/blob/master/README.md#Lines)
+* [доки по emmet(ускореное написание)](https://docs.emmet.io/cheat-sheet/)
+* [как писать документацию к коду](http://usejsdoc.org/)
+* [доки по Веб-технологим(в частности JS)](https://developer.mozilla.org/ru/docs/Web/JavaScript)
