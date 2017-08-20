@@ -11,11 +11,10 @@
 <script>
     'use strict';
 
-    let getDecimal = (num) => {
-        let numToStr    = num + '',
-            IntegerPart = (numToStr.indexOf('.') !== -1) ? numToStr.split('.')[1] : 0;
+    let getDecimal = num => {
+        let numToStr = num + '';
 
-        alert(IntegerPart);
+        return (numToStr.indexOf('.') !== -1) ? '0.' + numToStr.split('.')[1] : 0;
     };
 
     getDecimal(12.03);
