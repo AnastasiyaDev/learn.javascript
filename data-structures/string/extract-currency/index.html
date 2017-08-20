@@ -6,11 +6,10 @@
 </head>
 <body>
 <script>
-    var price = prompt('Введите сумму', '$120');
+    'use strict';
 
-    function extractCurrencyValue(str) {
-        return +str.substring(1);
-    }
+    let price = prompt('Введите сумму', '$120'),
+        extractCurrencyValue = str => +str.slice(1);
 
     alert(extractCurrencyValue(price));
 </script>

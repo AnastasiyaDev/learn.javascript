@@ -6,13 +6,15 @@
 </head>
 <body>
 <script>
-    var str = prompt('Введите слово', '');
+    'use strict';
 
-    function ucFirst(str) {
+    let str = prompt('Введите слово', '');
+
+    let ucFirst = (str) => {
         if (!str) return str; // проверка на пустую строчку
 
-        return str[0].toUpperCase() + str.substring(1);
-    }
+        return str[0].toUpperCase() + str.slice(1);
+    };
 
     alert(ucFirst(str));
 </script>

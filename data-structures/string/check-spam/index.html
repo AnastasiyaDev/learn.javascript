@@ -6,15 +6,17 @@
 </head>
 <body>
 <script>
-    var str = prompt('Введите текст', 'free xxxxx');
+    'use strict';
 
-    function checkSpam(str) {
+    let str = prompt('Введите текст', 'free xxxxx');
+
+    let checkSpam = str => {
+        let strLowerCase = str.toLocaleLowerCase();
+
         if (!str) return str; // проверка на пустую строчку
 
-        var strLowerCase = str.toLocaleLowerCase();
-
         return (strLowerCase.indexOf('xxx') != -1 || strLowerCase.indexOf('viagra') != -1)
-    }
+    };
 
     alert(checkSpam(str));
 </script>

@@ -6,12 +6,13 @@
 </head>
 <body>
 <script>
+    'use strict';
 
-    function truncate(str, maxlength) {
+    let truncate = (str, maxlength) => {
         if (str.length > maxlength) {
-            return str.substr(0, maxlength - 3) + '...';
+            return str.substr(0, maxlength - 1) + '\u2026'; // \u2026 - '...' unicode
         } else return str;
-    }
+    };
 
     alert(truncate('Вот, что мне хотелось бы сказать на эту тему:', 20));
     alert(truncate('Первый аргумент имеет такой же смысл, как и в substring, а второй содержит не конечную позицию, а количество символов.', 20));
