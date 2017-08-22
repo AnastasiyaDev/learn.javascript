@@ -1,4 +1,4 @@
-# Заметки по тотуриалу
+# Заметки
 
 можно добавлять [метки на циклы](https://learn.javascript.ru/while-for#метки-для-break-continue), а потом делать breake или continue по ним
 
@@ -56,7 +56,19 @@ alert( n.toString(16) ); // ff
 `Math.random() * (max - min) + min` - дробное  
 `Math.round(Math.random() * (max - min) + min)` - целое  
 
----------------
+---------------  
+
+### Объекты
+
+`Array.isArray(arr);` - проверка на массив
+
+`Object.assign(name, karma)` - копирует данные из объекта `name` в объект `karma`
+`Object.keys(user)` - массив ключей объекта `user`
+`Object.values(user)` - массив значений ключей объекта `user`
+`Object.entries(user)` - массив массивов полей `user`
+
+Есть встроенные методы у функций `foo`, например имеет `foo.name` - имя `foo` `foo.length` - количество параметров
+
 # Ресурсы 
 
 * [доки по Markdown](https://github.com/OlgaVlasova/markdown-doc/blob/master/README.md#Lines)
