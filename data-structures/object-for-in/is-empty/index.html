@@ -6,7 +6,9 @@
 </head>
 <body>
 <script>
-    function isEmpty(obj) {
+    'use strict';
+    //старое решиние:
+    /*function isEmpty(obj) {
         var counter = 0;
 
         for (var key in obj) {
@@ -14,14 +16,15 @@
         }
 
         return counter == 0;
-    }
+    }*/
 
+    // новое:
+    let isEmpty = obj => !Object.keys(obj).length;
+
+    // проверка
     var schedule = {};
-
     alert( isEmpty(schedule) ); // true
-
     schedule["8:30"] = "подъём";
-
     alert( isEmpty(schedule) ); // false
 </script>
 </body>

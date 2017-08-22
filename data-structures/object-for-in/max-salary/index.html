@@ -6,28 +6,51 @@
 </head>
 <body>
 <script>
-    var salaries = {
+    let salaries = {
         "Вася": 100,
         "Петя": 300,
-        "Даша": 250
+        "Даша": 750
     };
 
-    var counter = 0;
-    var max = 0;
-    var name;
+    let maxSalaries = obj => {
+        let counter = 0,
+        maxValue = 0,
+        name;
 
-    for (var key in salaries) {
-        counter++;
-
-        if (max < salaries[key]) {
-            max  = salaries[key];
-            name = key;
+        if (isEmpty(obj)) {
+            return 'нет сотрудников';
         }
+
+        for (let key in obj) {
+            if (maxValue < obj[key]) {
+                maxValue = obj[key];
+                name = key;
+            }
+        }
+
+        return name;
     }
 
-    if (counter == 0) {
-        alert('нет сотрудников');
-    } else alert(name);
+    let isEmpty = obj => !Object.keys(obj).length;
+
+    alert(maxSalaries(salaries));
+
+    // var counter = 0;
+    // var max = 0;
+    // var name;
+
+    // for (var key in salaries) {
+    //     counter++;
+
+    //     if (max < salaries[key]) {
+    //         max  = salaries[key];
+    //         name = key;
+    //     }
+    // }
+
+    // if (counter == 0) {
+    //     alert('нет сотрудников');
+    // } else alert(name);
 
 </script>
 </body>

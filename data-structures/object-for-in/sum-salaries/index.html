@@ -6,19 +6,34 @@
 </head>
 <body>
 <script>
-    var salaries = {
+    'use strict';
+    
+    let salaries = {
         "Вася": 100,
         "Петя": 300,
         "Даша": 250
     };
 
-    var sum = 0;
+    let emptyObj = {};
 
-    for (var key in salaries) {
-        sum = sum + salaries[key];
+    let sumValue = obj => {
+        let result = 0;
+
+        if (isEmpty(obj)) {
+            return 0;
+        }
+
+        for (let key in obj) {
+            result += obj[key];
+        } 
+
+        return result;
     }
 
-    alert(sum);
+    let isEmpty = obj => !Object.keys(obj).length;
+
+    alert(sumValue(salaries)); // 650
+    alert(sumValue(emptyObj)); // 0
 
 </script>
 </body>
