@@ -62,6 +62,8 @@ alert( n.toString(16) ); // ff
 
 `Array.isArray(arr);` - проверка на массив
 
+`arr.length=0` - очистка массива, так же можно задать длинну и укоротить его
+
 `Object.assign(name, karma)` - копирует данные из объекта `name` в объект `karma`  
 `Object.keys(user)` - массив ключей объекта `user`  
 `Object.values(user)` - массив значений ключей объекта `user`  

@@ -6,18 +6,22 @@
 </head>
 <body>
 <script>
+    'use strict';
 
-    var arr = [];
-    var sum = 0;
+    let num,
+        numArray = [],
+        sum = 0;
 
     while (true) {
-        var num = prompt('Введите число или пустую строку для выхода', '0');
-        if (num === '' || num === null) break;
-        arr.push(+num);
+        num = prompt('Введите число или пустую строку для выхода');
+
+        if (isNaN(num) || num === null || num === '') break;
+
+        numArray.push(+num);
     }
 
-    for (var i = 0; i < arr.length; i++) {
-        sum += arr[i];
+    for (let i = 0; i < numArray.length; i++) {
+        sum += numArray[i];
     }
 
     alert(sum);

@@ -6,18 +6,19 @@
 </head>
 <body>
 <script>
-    var arr = ["test", 2, 1.5, false];
-    var foo;
+    'use strict';
 
-    function find(arr, value) {
-        for (var i = 0; i < arr.length; i++) {
+    let arr = ["test", 2, 1.5, false];
+
+    let find = (arr, value) => {
+        for (let i = 0; i < arr.length; i++) {
             if (arr[i] === value) {
                 return i;
             }
-        }
 
-        return -1;
-    }
+            return -1;
+        }
+    };
 
     alert(find(arr, 2));
 </script>
