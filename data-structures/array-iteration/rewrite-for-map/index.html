@@ -6,13 +6,14 @@
 </head>
 <body>
 <script>
-    var arr = ["Есть", "жизнь", "на", "Марсе"];
+	'use strict';
+	let arr = ["Есть", "жизнь", "на", "Марсе"];
+ 	
+ 	let arrLength = arr.map(function(){
+ 		return arr.length
+ 	});
 
-    var arrLength = arr.map(function(item){
-        return item.length;
-    });
-
-    alert( arrLength ); // 4,5,2,5
+ 	alert(arrLength);
 </script>
 </body>
 </html>
