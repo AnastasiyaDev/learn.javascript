@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	'use strict';
+
+	let filter = (arr, func) => {
+		let newArr = arr.filter(function(item) {
+			return func(item);
+		});
+
+		return newArr;
+	};
+
+	let inBetween = (a, b) => {
+    	return function(numeric) {
+    		return numeric => a && numeric <= b;
+    	}
+    }
+    
+    let inArray = arr => {
+      return function(numeric) {
+    		return arr.indexOf(numeric) != -1;
+    	}
+    }
+
+
+	let arr = [1, 2, 3, 4, 5, 6, 7];
+
+	alert(filter(arr, function(a) {
+	  return a % 2 == 0
+	})); // 2,4,6
+
+</script>
+	
+</body>
+</html>
