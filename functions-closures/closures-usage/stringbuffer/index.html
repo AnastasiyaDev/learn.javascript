@@ -6,18 +6,28 @@
 </head>
 <body>
 <script>
+    'use strict';
 
-    function makeBuffer() {
-        var temp = '';
-        return function buffer(str) {
-            if (arguments.length == 0) {
-                return temp;
+    /**
+     * Cтроковый буфер
+     *
+     * @return {function(string)} Содержимое хранилища
+     */
+    let makeBuffer = () => {
+        let storage = '';
+
+        let buffer = (...rest) => {
+            if (rest.length === 0) {
+                return storage;
             }
-            temp += str;
-        }
-    }
 
-    var buffer = makeBuffer();
+            return storage += rest;
+        };
+
+        return buffer;
+    };
+
+    let buffer = makeBuffer();
 
     // добавить значения к буферу
     buffer('Замыкания');

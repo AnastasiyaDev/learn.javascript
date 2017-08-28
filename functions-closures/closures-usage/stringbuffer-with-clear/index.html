@@ -6,24 +6,30 @@
 </head>
 <body>
 <script>
+    'use strict';
 
-    function makeBuffer() {
-        var temp = '';
-        function buffer(str) {
-            if (arguments.length == 0) {
-                return temp;
+    /**
+     * Cтроковый буфер c очисткой
+     *
+     * @return {function(string)} Содержимое хранилища
+     */
+    let makeBuffer = () => {
+        let storage = '';
+
+        let buffer = (...rest) => {
+            if (rest.length === 0) {
+                return storage;
             }
-            temp += str;
-        }
 
-        buffer.clear = function () {
-            temp = '';
+            return storage += rest;
         };
 
-        return buffer;
-    }
+        buffer.clear = () => storage = '';
 
-    var buffer = makeBuffer();
+        return buffer;
+    };
+
+    let buffer = makeBuffer();
 
     buffer('Замыкания');
     buffer(' Использовать');
