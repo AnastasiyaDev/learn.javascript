@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		'use strict';
+
+		class Calculator {
+			constructor() {
+				this.operation = {
+						'-'(a, b) {
+							return a - b;
+						},
+
+						'+'(a, b) {
+							return a + b;
+						}
+					};
+			}
+
+			calculate(str) {
+				let separateSymbols = str.split(' '),
+					sum = 0;
+
+				return sum = this.operation[separateSymbols[1]](+separateSymbols[0], +separateSymbols[2]);
+			}
+
+			addMethod(name, func) {
+				this.operation[name] = func;
+			}
+		}
+
+		let calc = new Calculator;
+
+		alert( calc.calculate("3 + 7") ); // 10
+
+		var powerCalc = new Calculator;
+		powerCalc.addMethod("*", function(a, b) {
+		  return a * b;
+		});
+		powerCalc.addMethod("/", function(a, b) {
+		  return a / b;
+		});
+		powerCalc.addMethod("**", function(a, b) {
+		  return Math.pow(a, b);
+		});
+
+		var result = powerCalc.calculate("2 ** 3");
+		alert( result ); // 8
+	</script>
+</body>
+</html>

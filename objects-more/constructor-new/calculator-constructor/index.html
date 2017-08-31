@@ -6,30 +6,29 @@
 </head>
 <body>
 <script>
-    function Calculator() {
-        this.firstNum = +prompt('Введите первое число', '0');
-        this.secondNum = +prompt('Введите второе число', '0');
+    'use strict';
 
-        this.read = function () {
-            this.firstNum;
-            this.secondNum;
-        };
+    class Calculator {
+        constructor() {
+            this.firstNum = +prompt('Введите первое число', '0');
+            this.secondNum = +prompt('Введите второе число', '0');
 
-        this.sum = function () {
-            return this.firstNum + this.secondNum;
-        };
+            this.read = () => {
+                this.firstNum;
+                this.secondNum;
+            };
 
-        this.mul = function () {
-            return this.firstNum * this.secondNum;
+            this.sum = () => this.firstNum + this.secondNum;
+
+            this.mul = () => this.firstNum * this.secondNum;
         }
     }
 
-
-    var calculator = new Calculator();
+    let calculator = new Calculator();
     calculator.read();
 
-    alert( "Сумма=" + calculator.sum() );
-    alert( "Произведение=" + calculator.mul() );
+    alert( "Сумма = " + calculator.sum() );
+    alert( "Произведение = " + calculator.mul() );
 </script>
 </body>
 </html>

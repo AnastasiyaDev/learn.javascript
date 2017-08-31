@@ -6,18 +6,20 @@
 </head>
 <body>
 <script>
-    function Accumulator(value) {
-        this.value  = value;
-        this.inputNum = +prompt('Введите число', '0');
+    'use strict';
 
-        this.read = function () {
-            this.inputNum;
-            this.value += this.inputNum;
-        };
+    class Accumulator {
+        constructor(startingValue) {
+            this.value = startingValue;
+        }
+
+        read() {
+            let inputNum = +prompt('Input integer', '0');
+            this.value += inputNum;
+        }
     }
 
-
-    var accumulator = new Accumulator(1); // начальное значение 1
+    let accumulator = new Accumulator(1); // начальное значение 1
     accumulator.read(); // прибавит ввод prompt к текущему значению
     accumulator.read(); // прибавит ввод prompt к текущему значению
     alert( accumulator.value ); // выведет текущее значение
