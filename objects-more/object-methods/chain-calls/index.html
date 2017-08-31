@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		'use strict';
+
+		let ladder = {
+			step: 0,
+			up() { // вверх по лестнице
+				this.step++;
+				return this;
+			},
+
+			down() { // вниз по лестнице
+				this.step--;
+				return this;
+			},
+
+			showStep() { // вывести текущую ступеньку
+		  		alert( this.step );
+		  		return this;
+			}
+		};
+
+		ladder.up().up().up().down().showStep().down().showStep(); // 2 // 1
+	</script>
+</body>
+</html>
