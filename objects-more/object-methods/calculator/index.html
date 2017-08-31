@@ -6,20 +6,22 @@
 </head>
 <body>
     <script>
-        var calculator = {
+        'use strict';
+
+        let calculator = {
             firstNum: +prompt('Введите первое число', '0'),
             secondNum: +prompt('Введите второе число', '0'),
 
-            read: function () {
+            read() {
                 this.firstNum;
                 this.secondNum;
             },
 
-            sum: function () {
-                return 'Сумма: ' +(this.firstNum + this.secondNum);
+            sum() {
+                return 'Сумма: ' + (this.firstNum + this.secondNum);
             },
 
-            mul: function () {
+            mul() {
                 return 'Произведение: ' + this.firstNum * this.secondNum;
             }
         };
