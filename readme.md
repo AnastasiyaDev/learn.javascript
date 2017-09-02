@@ -94,6 +94,22 @@ alert( n.toString(16) ); // ff
 
 `function foo (arg1, arg2, ...rest){}` - `...rest` - массив оставшихся незаданных параметров `rest` - название массива, может быть любым  
 
+**Декоратор**
+
+Принемает функцию и то что должно быть до и поле нее, возвращает до + результат функции + после  
+
+```
+
+function wrapperDecorator(f, before, after) {
+	return function() {
+		return before + f.apply(this, arguments) + end; // apply - для уневерсальности вызова
+	};	
+}
+
+wrapperDecorator(getDay, '<div>', '</div>') // обернуть результат функции в div
+
+```
+
 **Преобразование объектов: `toString` и `valueOf`**
 
 * Любой объект в логическом контексте – `true`, даже если это пустой массив `[]` или объект `{}`
