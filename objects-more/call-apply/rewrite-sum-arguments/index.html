@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		'use strict';
+
+		function sumArgs() {
+			let sum  = 0,
+				args = [].slice.call(arguments);
+
+			for (let value of args) {
+				sum += value;
+			} 
+
+			return sum;
+		}
+
+		alert( sumArgs(1, 2, 3) ); // 6, аргументы переданы через запятую, без массива
+	</script>
+</body>
+</html>
