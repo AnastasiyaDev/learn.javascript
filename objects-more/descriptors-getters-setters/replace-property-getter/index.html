@@ -12,34 +12,25 @@
         constructor(fullName) {
             this.fullName = fullName;
         }
-
-        // если через User.prototype Property description must be an object: f
-        // https://artandlogic.com/2016/05/es6-subclasses-and-object-defineproperty/
-
-        // SyntaxError: Unexpected token .
-
-
-        Object.defineProperties(this, 'firstName', { 
-            get() {
-                return this.fullName.split(' ')[0];
-            },
-
-            set(newFirstName) {
-                this.fullName = newFirstName + ' ' + this.lastName;
-            }
-        });
-
-        Object.defineProperties(this, 'lastName', {
-            get() {
-                return this.fullName.split(' ')[1];
-            },
-
-            set(newLastName) {
-                this.fullName = this.firstName + ' ' + newLastName;
-            }
-        });
     }
 
+    Object.defineProperties(User.prototype, 'firstName', {
+        get() {
+            return this.fullName.split(' ')[0];
+        },
+        set(newFirstName) {
+            this.fullName = newFirstName + ' ' + this.lastName;
+        }
+    });
+
+    Object.defineProperties(User.prototype, 'lastName', {
+        get() {
+            return this.fullName.split(' ')[1];
+        },
+        set(newLastName) {
+            this.fullName = this.firstName + ' ' + newLastName;
+        }
+    });
 
     var vasya = new User("Василий Попкин");
 
