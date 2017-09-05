@@ -14,7 +14,7 @@
         }
     }
 
-    Object.defineProperties(User.prototype, 'firstName', {
+    Object.defineProperty(User.prototype, 'firstName', {
         get() {
             return this.fullName.split(' ')[0];
         },
@@ -23,7 +23,7 @@
         }
     });
 
-    Object.defineProperties(User.prototype, 'lastName', {
+    Object.defineProperty(User.prototype, 'lastName', {
         get() {
             return this.fullName.split(' ')[1];
         },
