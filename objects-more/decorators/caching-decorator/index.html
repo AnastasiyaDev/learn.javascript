@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		'use strict';
+    
+    	let f = x => Math.random() * x;
+    
+	    let makeCaching = func => {
+	      let count = {};
+	      
+	      return function(x) {
+	        if(!(x in count)) {
+	        	count[x] = func.call(this, x);
+	        }
+	          
+	        return count[x];
+	      }
+	    }
+	    
+	    f = makeCaching(f);
+
+		let a = f(1),
+			b = f(1);
+			
+		alert( a == b ); // true (значение закешировано)
+
+		b = f(2);
+		alert( a == b ); // false, другой аргумент => другое значение
+	</script>
+</body>
+</html>
