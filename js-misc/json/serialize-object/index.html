@@ -6,12 +6,14 @@
 </head>
 <body>
 <script>
-    var leader = {
+    'use strict';
+
+    let leader = {
         name: "Василий Иванович",
         age: 35
     };
 
-    var jsonObj = JSON.stringify(leader, '', 4);
+    let jsonObj = JSON.stringify(leader, ' ', 4);
     alert (jsonObj);
 
     leader = JSON.parse(jsonObj);
