@@ -29,6 +29,14 @@ var a = '443';
 
 `isNaN()` - проверка  на NaN, `isFinite()` - проверка на infyity и NaN  
 
+### Проверка на тип данных
+
+1.  `typeof` - подходит для примитивов, кроме `null` и функций  
+2.  `[[Class]]` - использование `{}.toString.call(obj).slice(8, -1);` возвращает подходит только только для встроенных объектов  
+3.  `Array.isArray(arr)` - возвращает `true` только если `arr` – массив  
+4.  `instanceof` - использование `user instanceof User`, возвращает `true || false`, даже учитывает наследование  
+5.  "Утиная типизация" `«If it looks like a duck, swims like a duck and quacks like a duck, then it probably is a duck (who cares what it really is)».`
+
 ### Округление числа 
 Округления числа побитовым оператором:  
 `(12.34^0) = 12` - скобки нужны, т.к. приоритет у `^` маленький  
