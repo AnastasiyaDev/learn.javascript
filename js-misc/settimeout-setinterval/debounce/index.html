@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		'use string';
+
+		let debounce = (func, ms) => {
+			let ignore = false;
+
+			return function () {
+				if (ignore) return;
+
+				ignore = true;
+
+		        func.apply(this, arguments);
+
+		        setTimeout(function() { ignore = false; }, ms);
+			}
+		};
+
+		function func(x) { alert(x) }
+		let f = debounce(func, 1000);
+
+		f(1); // 1, выполнится сразу же
+		f(2); // игнор
+
+		setTimeout( function() { f(3) }, 100); // игнор (прошло только 100 мс)
+		setTimeout( function() { f(4) }, 1100); // 4, выполнится
+		setTimeout( function() { f(5) }, 1500); // игнор
+		setTimeout( function() { f(6) }, 2200); // должно выполниться
+	</script>
+</body>
+</html>
