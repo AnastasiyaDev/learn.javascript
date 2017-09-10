@@ -172,8 +172,52 @@ alert( event.date.getDate() );
   
 `space` - отвечает за форматирование, если он является числом – то уровни вложенности в JSON оформляются указанным количеством пробелов, если строкой – вставляется эта строка.
 
-Серелизовать объекты ссылающиеся друг  на друга не выйдет!!!
+Серелизовать объекты ссылающиеся друг  на друга не выйдет!!! 
 
+### Прототипы  
+
+obj.__proto__ - прототип `obj.__proto__ = { name: 'obj', ...}` - запись в __proto__
+аналогичная запись Oblect.setPrototypeOf(obj, {}); - ее и надо использовать
+Oblect.getPrototypeOf(obj);
+
+`.prototype` - у функций конструкторов
+
+
+`obj.hasOwnProperty(prop)` возвращает `true`, если свойство prop принадлежит самому объекту `obj`, иначе `false`.  
+
+**Протипное наследование**
+
+для общих методов всех объектов есть ссылка `Array.prototype.__proto__`, равная `Object.prototype`  
+![](/img/extend.png)
+
+* В явном виде new String, new Number и new Boolean никогда не вызываются  
+* Значения null и undefined не имеют свойств  
+
+** Процесс наследования **  
+
+`Child.prototype = Object.create(Parent.prototype);` `Child` и `Parent` - конструкторы  
+`Child.prototype.constructor = Child;` - чтобы не потерять свойство `constructor` (есть в `prototype` по умолчанию), указывающее на функцию-конструктор  
+
+Добавить свой метод в прототип, чтобы он был общим для всех элементов класса (экономия ресурсов)  
+```
+Child.prototype.jump = function() {
+  ...
+}
+```  
+Если свойства и/или методы внутри конструктора ребенка и роителя соввпадают, то можно упростить код и в ребенке использовать:  
+```
+function Child(name) {
+  Parent.apply(this, arguments);
+}
+```  
+Вызов метода родителя внутри своего:
+```
+Child.prototype.run = function() {
+   // вызвать метод родителя, передав ему текущие аргументы
+   Parent.prototype.run.apply(this, arguments);
+   this.jump();
+}
+```
 # Ресурсы 
 
 * [доки по Markdown](https://github.com/OlgaVlasova/markdown-doc/blob/master/README.md#Lines)
