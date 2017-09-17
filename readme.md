@@ -91,7 +91,7 @@ alert( n.toString(16) ); // ff
 `arr.length=0` - очистка массива, так же можно задать длинну и укоротить его  
 
 Метоты массивов:
-![](/img/methods.png)
+![](/assets/img/methods.png)
 
 **Функции**
 
@@ -186,7 +186,7 @@ Oblect.getPrototypeOf(obj);
 **Протипное наследование**
 
 для общих методов всех объектов есть ссылка `Array.prototype.__proto__`, равная `Object.prototype`  
-![](/img/extend.png)
+![](/assets/img/extend.png)
 
 * В явном виде new String, new Number и new Boolean никогда не вызываются  
 * Значения null и undefined не имеют свойств  
