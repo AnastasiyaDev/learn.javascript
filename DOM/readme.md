@@ -1,29 +1,28 @@
 # Документ, события, интерфейсы
 
-** Окружение **
+**Окружение**
 
 ![](../assets/img/window.png)
 
 `window.navigator` - содержит общую информацию о браузере и операционной системе  
 `window.location.href` - содержит информацию о текущем URL  
 
-** Навигация **
+**Навигация**  
 Включает текстовые узлы:  
 ![](../assets/img/navigation.png)  
 
 Только по элементам  
 ![](../assets/img/elementNavigation.png) 
 
-Особая навигация есть по таблицам и формам
+Особая навигация есть по таблицам и формам  
 
-Методы поиска:  
 ![](../assets/img/searchElements.png)
 
 * `elem.matches(css)` - проверяет, удовлетворяет ли элемент CSS-селектору  
 * `elem.closest(css)` - ближайший вверх по DOM
 
 
-** Коллекции ** 
+**Коллекции** 
 DOM-коллекции, такие как `childNodes` не являются JavaScript-массивами.  
 Можно для перебора коллекции использовать обычный цикл `for(var i=0; i<elems.length; i++)`  
 
@@ -45,4 +44,8 @@ ______________________________________________
 
 id создает в глобальной области видимости объект
 
-document.querySelector('');
+document.querySelector('');  
+
+# Ресурсы 
+
+* [Шпаргалка по работе с DOM от Мезина](https://github.com/AnastasiyaDev/learn.javascript/blob/master/assets/dom.pdf)
