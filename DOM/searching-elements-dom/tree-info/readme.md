@@ -1,0 +1,1 @@
+[задача на plnkr.co](http://plnkr.co/edit/oGzy6j?p=preview)
