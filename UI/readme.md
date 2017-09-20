@@ -67,6 +67,26 @@ elems = Array.prototype.slice.call(elems); // теперь elems - массив
 2. Когда нужно получить «оригинальное значение» стандартного HTML-атрибута, например, `<input value="...">`  
 3. Когда нужно получить список всех атрибутов, включая пользовательские. Для этого используется коллекция `attributes`  
 
+### Создание и вставка DOM-узлов
+Методы для создания узлов:  
+* `document.createElement(tag)` – создает элемент  
+* `document.createTextNode(value)` – создает текстовый узел  
+* `elem.cloneNode(deep)` – клонирует элемент, если `deep == true`, то со всеми потомками  
+
+Вставка и удаление узлов:  
+* `parent.appendChild(elem)`  
+* `parent.insertBefore(elem, nextSibling)`  
+* `parent.removeChild(elem)`  
+* `parent.replaceChild(newElem, elem)`  
+
+`elem.insertAdjacentHTML(where, html);` - позволяет вставить строку содержащую HTML в любое место документа относительно `elem`
+
+Методы из нового стандарта:  
+* `node.append(...nodes)` – вставляет `nodes` в конец `node`  
+* `node.prepend(...nodes)` – вставляет `nodes` в начало `node`  
+* `node.after(...nodes)` – вставляет `nodes` после узла `node`  
+* `node.before(...nodes)` – вставляет `nodes` перед узлом `node`  
+* `node.replaceWith(...nodes)` – вставляет `nodes` вместо `node`  
 
 ______________________________________________
 
