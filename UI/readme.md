@@ -81,7 +81,7 @@ elems = Array.prototype.slice.call(elems); // теперь elems - массив
 
 `elem.insertAdjacentHTML(where, html);` - позволяет вставить строку содержащую HTML в любое место документа относительно `elem`
 
-Методы из нового стандарта:  
+Методы из нового стандарта (лчше поключать [полифилл](https://cdn.polyfill.io/v2/docs/)):  
 * `node.append(...nodes)` – вставляет `nodes` в конец `node`  
 * `node.prepend(...nodes)` – вставляет `nodes` в начало `node`  
 * `node.after(...nodes)` – вставляет `nodes` после узла `node`  
