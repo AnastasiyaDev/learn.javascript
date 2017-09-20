@@ -88,6 +88,21 @@ elems = Array.prototype.slice.call(elems); // теперь elems - массив
 * `node.before(...nodes)` – вставляет `nodes` перед узлом `node`  
 * `node.replaceWith(...nodes)` – вставляет `nodes` вместо `node`  
 
+### Стили
+
+* Получить/Записать через свойство `style`: `elem.style.backgroundColor = 'red'` - по одному св-ву  
+* `elem.style.cssText` - целая строка св-в через `;`, при перенове вконце `\`:  
+ ```
+ btn.style.cssText = '-moz-border-radius: 8px; \
+     -webkit-border-radius: 8px;\
+     border-radius: 8px;\
+     border: 2px groove green;\
+     display: block;'
+ ```
+* Получить все стили, даже те, которые устрановлены через css-каскад: `getComputedStyle(element[, pseudo])`  
+`pseudo` - указывается, если нужен стиль псевдо-элемента, например `::before`  
+`getComputedStyle` при обращении к сокращенному св-ву: `padding, margin, border` – правильный результат не гарантирует  
+
 ______________________________________________
 
 id создает в глобальной области видимости объект
