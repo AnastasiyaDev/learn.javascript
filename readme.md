@@ -1,3 +1,7 @@
+# Учебный проект
+
+https://github.com/AnastasiyaDev/components
+
 # Заметки
 
 можно добавлять [метки на циклы](https://learn.javascript.ru/while-for#метки-для-break-continue), а потом делать breake или continue по ним
