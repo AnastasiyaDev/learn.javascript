@@ -222,7 +222,7 @@ Child.prototype.run = function() {
 ```
 # Ресурсы 
 
-* [доки по Markdown](https://github.com/OlgaVlasova/markdown-doc/blob/master/README.md#Lines)
+* [доки по Markdown](https://github.com/OlgaVlasova/markdown-doc/blob/master/README.md#Lines) и [еще](http://paulradzkov.com/2014/markdown_cheatsheet/)
 * [доки по emmet(ускореное написание)](https://docs.emmet.io/cheat-sheet/)
 * [как писать документацию к коду](http://usejsdoc.org/)
 * [доки по Веб-технологим(в частности JS)](https://developer.mozilla.org/ru/docs/Web/JavaScript)
